@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    image: docker-testing-backend:latest
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"   # adjust host:container if necessary
+    # volumes:
+    #   - ./:/app     # uncomment only for dev (live code mount)
